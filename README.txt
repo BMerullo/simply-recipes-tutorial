@@ -1,1 +1,0 @@
-## SimplyRecipes Gatsby tutorial
