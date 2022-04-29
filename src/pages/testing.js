@@ -1,15 +1,15 @@
 import React from "react";
 import Layout from "../components/Layout";
-import AllRecipes from "../components/AllRecipes";
+import Gallery from "../examples/Gallery";
 
-const Recipes = recipes => {
+const Testing = ({ data }) => {
   return (
     <Layout>
       <main className="page">
-        <AllRecipes />
+        <Gallery />
       </main>
     </Layout>
   );
 };
 
-export default Recipes;
+export default Testing;
