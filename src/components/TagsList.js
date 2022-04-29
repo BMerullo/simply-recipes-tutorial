@@ -1,7 +1,11 @@
 import React from "react";
 
 const TagsList = props => {
-  return <div>this is tags list</div>;
+  return (
+    <div>
+      <p>this is tags list</p>
+    </div>
+  );
 };
 
 export default TagsList;
