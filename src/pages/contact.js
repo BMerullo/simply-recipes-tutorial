@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/Layout";
 import RecipesList from "../components/RecipesList";
 import { graphql } from "gatsby";
-import slugify from "slugify";
 
 const Contact = ({ data }) => {
   console.log(data, "data");
