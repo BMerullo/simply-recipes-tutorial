@@ -1,8 +1,7 @@
 import React from "react";
-import RecipesList from "./RecipesList";
 import TagsList from "./TagsList";
+import RecipesList from "./RecipesList";
 import { graphql, useStaticQuery } from "gatsby";
-
 const query = graphql`
   {
     allContentfulRecipe(sort: { fields: title, order: ASC }) {
@@ -23,9 +22,8 @@ const query = graphql`
 `;
 const AllRecipes = () => {
   const data = useStaticQuery(query);
-  // console.log(data);
   const recipes = data.allContentfulRecipe.nodes;
-  // console.log(recipes);
+
   return (
     <section className="recipes-container">
       <TagsList recipes={recipes} />

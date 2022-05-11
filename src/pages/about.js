@@ -4,11 +4,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 import RecipesList from "../components/RecipesList";
 
-const About = ({
-  data: {
-    allContentfulRecipe: { nodes: recipes },
-  },
-}) => {
+const About = ({ data }) => {
+  const recipes = data.allContentfulRecipe.nodes;
+  console.log(data);
   return (
     <Layout>
       <main className="page">
@@ -50,6 +48,8 @@ export const query = graphql`
       filter: { featured: { eq: true } }
     ) {
       nodes {
+        id
+        title
         cookTime
         prepTime
         image {
