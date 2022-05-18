@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
 import logo from "../assets/images/logo.svg";
-import slugify from "slugify";
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
