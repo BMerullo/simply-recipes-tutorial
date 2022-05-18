@@ -3,12 +3,14 @@ import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 import RecipesList from "../components/RecipesList";
+import SEO from "../components/SEO";
 
 const About = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes;
   console.log(data);
   return (
     <Layout>
+      <SEO title="About" description="This is the about page" />
       <main className="page">
         <section className="about-page">
           <article>
@@ -53,7 +55,12 @@ export const query = graphql`
         cookTime
         prepTime
         image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            quality: 100
+            width: 1000
+          )
         }
       }
       totalCount
